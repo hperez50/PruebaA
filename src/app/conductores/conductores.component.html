@@ -1,0 +1,46 @@
+
+<div class="container">
+    <!--<h1>{{titulo}}</h1> -->
+
+<button  class="btn btn-danger" type="button" [routerLink]="['/empresas']"> Volver a pagina principal </button>
+<button class="btn btn-info" type="button" [routerLink]="['/conductores/form']"> Rgistro conductores </button>
+
+<table ALIGN="center" class="table caption-top">
+    <caption>Registro de conductores vinculados a sus vehiculos</caption>
+    <thead>
+      <tr>
+        <th scope="col">Numero</th>
+        <th scope="col">Id conductores</th>
+        <th scope="col">Tipo id conductores</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Departamento</th>
+        <th scope="col">País</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Id empresa</th>
+        <th scope="col">Id placa</th>
+                
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let conductor of conductores">
+        <th scope="row"> {{conductor.numero}} </th>
+        <td>{{ conductor.id_conductores }}</td>
+        <td>{{ conductor.tipo_id_conductores }}</td>
+        <td>{{ conductor.nombre }}</td>
+        <td>{{ conductor.direccion }}</td>
+        <td>{{ conductor.ciudad }}</td>
+        <td>{{ conductor.departamento }}</td>
+        <td>{{ conductor.pais }}</td>
+        <td>{{ conductor.telefono }}</td>
+        <td>{{ conductor.vehiculos_empresa_id_empresa }}</td>
+        <td>{{ conductor.vehiculos_id_placa }}</td>
+       
+        
+        <td> <button type="button" name="button" class="btn btn-primary" [routerLink]="['/conductores/form',conductor.numero]">Editar</button></td>
+        <td><button class="btn btn-danger" (click)="delete(conductor)">Eliminar</button></td>
+      </tr>      
+    </tbody>
+  </table>
+</div>

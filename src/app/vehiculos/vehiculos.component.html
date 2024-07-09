@@ -1,0 +1,51 @@
+<div class="container">
+  <!--<h1>{{titulo}}</h1> -->
+
+  <button class="btn btn-danger" type="button" [routerLink]="['/empresas']"> Volver a pagina principal </button>
+  <button class="btn btn-info" type="button" [routerLink]="['/vehiculos/form']"> Rgistro vehiculos </button>
+
+  <table ALIGN="center" class="table caption-top">
+    <caption>Lista de Vehiculos</caption>
+    <thead>
+      <tr>
+        <th scope="col">Id placa</th>
+        <th scope="col">Motor</th>
+        <th scope="col">Chasis</th>
+        <th scope="col">Modelo</th>
+        <th scope="col">Fecha matricula</th>
+        <th scope="col">Pasajeros sentados</th>
+        <th scope="col">Pasajeros de pie</th>
+        <th scope="col">Peso seco</th>
+        <th scope="col">Peso bruto</th>
+        <th scope="col">Número de puertas</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Linea</th>
+        <th scope="col">Id Empresa Afiliada</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vehiculo of vehiculos">
+        <th scope="row"> {{vehiculo.id_placa}} </th>
+        <td>{{ vehiculo.motor }}</td>
+        <td>{{ vehiculo.chasis }}</td>
+        <td>{{ vehiculo.modelo }}</td>
+        <td>{{ vehiculo.fecha_matricula }}</td>
+        <td>{{ vehiculo.cantdad_sentados }}</td>
+        <td>{{ vehiculo.cantidad_pie }}</td>
+        <td>{{ vehiculo.peso_seco }}</td>
+        <td>{{ vehiculo.peso_bruto }}</td>
+        <td>{{ vehiculo.cantidad_puertas }}</td>
+        <td>{{ vehiculo.marca }}</td>
+        <td>{{ vehiculo.linea }}</td>
+        <td>{{ vehiculo.empresa_id_empresa }}</td>
+
+        <td> <button type="button" name="button" class="btn btn-primary"
+            [routerLink]="['/vehiculos/form',vehiculo.id_placa]">Editar</button></td>
+        <td><button class="btn btn-danger" (click)="delete(vehiculo)">Eliminar </button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,116 @@
+<div class="container">
+    
+    <div class="card-body">
+        <h5 class="card-title">{{titulo}}</h5>
+        <form>
+            <div class="form-group row">
+                <label for="id_placa" class="col-form-label col-sm-2">Id placa</label>
+                <div class="col-sm-6">
+                    <input type="text" id="idplaca" class="form-control" name="id_placa" [(ngModel)]="vehiculos.id_placa" >
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="motor" class="col-form-label col-sm-2">Motor</label>
+                <div class="col-sm-6">
+                    <input type="text" id="idmotor" class="form-control" name="motor" [(ngModel)]="vehiculos.motor">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="chasis" class="col-form-label col-sm-2">Chasis</label>
+                <div class="col-sm-6">
+                    <input type="text" id="idchasis" class="form-control" name="chasis" [(ngModel)]="vehiculos.chasis">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="modelo" class="col-form-label col-sm-2">Modelo</label>
+                <div class="col-sm-6">
+                    <input type="text" id="idmodelo" class="form-control" name="modelo" [(ngModel)]="vehiculos.modelo">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="fecha_matricula" class="col-form-label col-sm-2">Fecha matricula</label>
+                <div class="col-sm-6">
+                    <input type="text" id="idmatricula" class="form-control" name="fecha_matricula" [(ngModel)]="vehiculos.fecha_matricula">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="cantdad_sentados" class="col-form-label col-sm-2">Cantidad sentados</label>
+                <div class="col-sm-6">
+                    <input type="number" id="idcs" class="form-control" name="cantdad_sentados" [(ngModel)]="vehiculos.cantdad_sentados">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="cantidad_pie" class="col-form-label col-sm-2">Cantidad de pie</label>
+                <div class="col-sm-6">
+                    <input type="number" id="idcp" class="form-control" name="cantidad_pie" [(ngModel)]="vehiculos.cantidad_pie">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="peso_seco" class="col-form-label col-sm-2">Peso seco</label>
+                <div class="col-sm-6">
+                    <input type="text" id="idps" class="form-control" name="peso_seco" [(ngModel)]="vehiculos.peso_seco">
+                </div>
+            </div>
+   
+
+            <div class="form-group row">
+                <label for="peso_bruto" class="col-form-label col-sm-2">Peso bruto</label>
+                <div class="col-sm-6">
+                    <input type="text" id="idpb" class="form-control" name="peso_bruto" [(ngModel)]="vehiculos.peso_bruto">
+                </div>
+            </div>
+
+           
+            <div class="form-group row">
+                <label for="cantidad_puertas" class="col-form-label col-sm-2">Cantidad puertas</label>
+                <div class="col-sm-6">
+                    <input type="number" id="idp" class="form-control" name="cantidad_puertas" [(ngModel)]="vehiculos.cantidad_puertas">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="marca" class="col-form-label col-sm-2">Marca</label>
+                <div class="col-sm-6">
+                    <input id="idmarca" type="text" class="form-control" name="marca" [(ngModel)]="vehiculos.marca">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="linea" class="col-form-label col-sm-2">Linea</label>
+                <div class="col-sm-6">
+                    <input id="idlinea" type="text" class="form-control" name="linea" [(ngModel)]="vehiculos.linea">
+                </div>
+            </div>           
+
+         
+            <div class="form-group row">
+                <label for="empresa.id_empresa" class="col-form-label col-sm-2">Id empresa</label>
+                
+                <select id="opc" class="col-sm-1" name="miselect" [(ngModel)]="vehiculos.empresa_id_empresa">
+                    <option selected="true"></option>
+                    <option *ngFor="let empresa of empresas" > {{ empresa.id_empresa }}  </option>
+                        
+                
+            </select>
+                
+            </div>
+
+            
+
+            <button class="btn btn-success" role="button" (click)='create()' onclick="validar()" >Registrar</button>
+            <button class="btn btn-success" role="button" (click)='update()' onclick="validar()">Actualizar</button>
+           
+            
+
+        </form>
+    </div>
+</div>
+
+
+

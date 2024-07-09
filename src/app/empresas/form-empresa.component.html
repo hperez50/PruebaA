@@ -1,0 +1,128 @@
+<div class="container">
+    
+    <div class="card-body">
+        <h5 class="card-title">{{titulo}}</h5>
+        <form>
+            <div class="form-group row">
+                <label for="id_empresa" class="col-form-label col-sm-2">Id empresa</label>
+                <div class="col-sm-6">
+                    <input id="id_empresa" type="number" class="form-control" name="id_empresa" [(ngModel)]="empresa.id_empresa">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="nombre_empresa" class="col-form-label col-sm-2">Nombre empresa</label>
+                <div class="col-sm-6">
+                    <input id="nombre_empresa" type="text" class="form-control" name="nombre_empresa" [(ngModel)]="empresa.nombre_empresa">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="tipo_id_empresa" class="col-form-label col-sm-2"> tipo de Id empresa</label>
+                <div class="col-sm-6">
+                    <input id="tipo_id_empresa" type="text" class="form-control" name="tipo_id_empresa" [(ngModel)]="empresa.tipo_id_empresa">
+                </div>
+            </div>
+
+            
+            <div class="form-group row">
+                <label for="direccion" class="col-form-label col-sm-2">Dirección</label>
+                <div class="col-sm-6">
+                    <input id="direccion" type="text" class="form-control" name="direccion" [(ngModel)]="empresa.direccion">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="ciudad" class="col-form-label col-sm-2">Ciudad</label>
+                <div class="col-sm-6">
+                    <input id="ciudad" type="text" class="form-control" name="ciudad" [(ngModel)]="empresa.ciudad">
+                </div>
+            </div>
+
+            
+            <div class="form-group row">
+                <label for="departamente" class="col-form-label col-sm-2">Departamento</label>
+                <div class="col-sm-6">
+                    <input id="departamente" type="text" class="form-control" name="departamente" [(ngModel)]="empresa.departamente">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="pais" class="col-form-label col-sm-2">País</label>
+                <div class="col-sm-6">
+                    <input id="pais" type="text" class="form-control" name="pais" [(ngModel)]="empresa.pais">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="telefono" class="col-form-label col-sm-2">Telefono</label>
+                <div class="col-sm-6">
+                    <input id="telefono" type="number" class="form-control" name="telefono" [(ngModel)]="empresa.telefono">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="tipo_id_repre" class="col-form-label col-sm-2">Tipo de Id representante</label>
+                <div class="col-sm-6">
+                    <input id="tipo_id_repre" type="text" class="form-control" name="tipo_id_repre" [(ngModel)]="empresa.tipo_id_repre">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="id_repre" class="col-form-label col-sm-2">Id representante</label>
+                <div class="col-sm-6">
+                    <input id="id_repre" type="number" class="form-control" name="id_repre" [(ngModel)]="empresa.id_repre">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="nombre_repre" class="col-form-label col-sm-2">Nombre representante</label>
+                <div class="col-sm-6">
+                    <input id="nombre_repre" type="text" class="form-control" name="nombre_repre" [(ngModel)]="empresa.nombre_repre">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="direccion_repre" class="col-form-label col-sm-2">Dirección representante</label>
+                <div class="col-sm-6">
+                    <input id="direccion_repre" type="text" class="form-control" name="direccion_repre" [(ngModel)]="empresa.direccion_repre">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="ciudad_repre" class="col-form-label col-sm-2">Ciudad representante</label>
+                <div class="col-sm-6">
+                    <input id="ciudad_repre" type="text" class="form-control" name="ciudad_repre" [(ngModel)]="empresa.ciudad_repre">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="departamento_repre" class="col-form-label col-sm-2">Departamento representante</label>
+                <div class="col-sm-6">
+                    <input id="departamento_repre" type="text" class="form-control" name="departamento_repre" [(ngModel)]="empresa.departamento_repre">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="pais_repre" class="col-form-label col-sm-2">País de representante</label>
+                <div class="col-sm-6">
+                    <input id="pais_repre" type="text" class="form-control" name="pais_repre" [(ngModel)]="empresa.pais_repre">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="telefono_repre" class="col-form-label col-sm-2">Telefono de representante</label>
+                <div class="col-sm-6">
+                    <input id="telefono_repre" type="number" class="form-control" name="telefono_repre" [(ngModel)]="empresa.telefono_repre">
+                </div>
+            </div>
+
+            <button class="btn btn-success" role="button" (click)='create()' >Registrar</button>
+            <button class="btn btn-success" role="button" (click)='update()' >Actualizar</button>
+            
+
+        </form>
+    </div>
+</div>
+
+

@@ -6,8 +6,85 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
   <app-root></app-root>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  
+  
+
+  <script>
+    function validar(){
+        var placa=document.getElementById('idplaca');
+        var motor=document.getElementById('idmotor');
+        var chasis=document.getElementById('idchasis');
+        var modelo=document.getElementById('idmodelo');
+        var matricula=document.getElementById('idmatricula');
+        var idcs=document.getElementById('idcs');
+        var idcp=document.getElementById('idcp');
+        var idps=document.getElementById('idps');
+        var idpb=document.getElementById('idpb');
+        var idp=document.getElementById('idp');
+        var idmarca=document.getElementById('idmarca');
+        var idlinea=document.getElementById('idlinea');
+        var opc=document.getElementById('opc');
+                
+        
+        if(placa.value=="" || motor.value=="" || chasis.value==""|| modelo.value==""|| matricula.value==""
+        || idcs.value==""|| idcp.value==""|| idps.value==""|| idpb.value==""
+        || idp.value==""|| idmarca.value==""|| idlinea.value=="" || opc.value==""){
+            alert("El campo no puede ser nulo");
+            //opc.focus();
+          
+        }       
+
+        /*if(opc.value==0 || opc.value==""){
+            alert("Seleccione una opción");
+            opc.focus();
+        }*/
+
+
+    }
+</script>
+
+<script>
+  function validarR(){
+    var placa=document.getElementById('id_empresa');
+      var motor=document.getElementById('nombre_empresa');
+      var chasis=document.getElementById('tipo_id_empresa');
+      var modelo=document.getElementById('direccion');
+      var matricula=document.getElementById('ciudad');
+      var idcs=document.getElementById('departamente');
+      var idcp=document.getElementById('pais');
+      var idps=document.getElementById('telefono');
+      var idpb=document.getElementById('tipo_id_repre');
+      var idp=document.getElementById('id_repre');
+      var idmarca=document.getElementById('nombre_repre');
+      var idlinea=document.getElementById('direccion_repre');
+      var opc=document.getElementById('ciudad_repre');
+	  var opc_1=document.getElementById('ciudad_repre');
+	  var opc_2=document.getElementById('ciudad_repre');
+	  var opc_3=document.getElementById('ciudad_repre');
+              
+      
+      if(placa.value=="" || motor.value=="" || chasis.value==""|| modelo.value==""|| matricula.value==""
+      || idcs.value==""|| idcp.value==""|| idps.value==""|| idpb.value==""
+      || idp.value==""|| idmarca.value==""|| idlinea.value=="" || opc.value=="" 
+	    || opc_1.value=="" || opc_2.value=="" || opc_3.value==""){
+          alert("El campo no puede ser nulo");
+          return Math.random();
+          //opc.focus();
+        
+      }       
+      return;
+
+  }
+</script>
+
+
+
 </body>
 </html>
